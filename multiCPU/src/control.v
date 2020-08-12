@@ -1,9 +1,9 @@
 
 `timescale 1ns / 1ps
 
-//ĞÅºÅ¿ØÖÆµ¥ÔªÄ£¿é£ºControlUnit
-//ÊäÈë£ºÊ±ÖÓĞÅºÅclk£¬Áã±êÖ¾Î»zero£¬·ûºÅÎ»±êÖ¾sign
-//Êä³ö£º¸÷¸ö¿ØÖÆĞÅºÅ
+//ä¿¡å·æ§åˆ¶å•å…ƒæ¨¡å—ï¼šControlUnit
+//è¾“å…¥ï¼šæ—¶é’Ÿä¿¡å·clkï¼Œé›¶æ ‡å¿—ä½zeroï¼Œç¬¦å·ä½æ ‡å¿—sign
+//è¾“å‡ºï¼šå„ä¸ªæ§åˆ¶ä¿¡å·
 module control(
     input clk,
     input rst,
@@ -26,13 +26,13 @@ module control(
     output reg [4:0] beat
     //output reg [2:0] out_state
     );  
-    //ÏÈ½«¶ÔÓ¦Çé¿öµÄ½×¶ÎºÍ¶ÔÓ¦Çé¿öµÄÖ¸ÁîÉèÖÃ³É³£Êı·½±ã½øĞĞ±àĞ´´úÂë
-    parameter [2:0] s0=4'b0000, s1=4'b0001, s2=4'b0010, s3=4'b0011, s4=4'b0100, s5=4'b0101, s6=4'b0110, s7=4'b0111, s8=4'b1000, s9=4'b1001; 
-    parameter [5:0] Rtype=6'b000000, SW=6'b101011, LW=6'b100011, BEQ=6'b000100, J=6'b000010, HALT=6'b111111; //Ö¸ÁîÃû³£Á¿
-    reg [2:0] state, next_state;    //stateÎªµ±Ç°Ëù×´´¦µÄ×´Ì¬£¬next_stateÊÇµ±Ç°×´Ì¬µÄÏÂÒ»¸ö×´Ì¬
+    //å…ˆå°†å¯¹åº”æƒ…å†µçš„é˜¶æ®µå’Œå¯¹åº”æƒ…å†µçš„æŒ‡ä»¤è®¾ç½®æˆå¸¸æ•°æ–¹ä¾¿è¿›è¡Œç¼–å†™ä»£ç 
+    parameter [3:0] s0=4'b0000, s1=4'b0001, s2=4'b0010, s3=4'b0011, s4=4'b0100, s5=4'b0101, s6=4'b0110, s7=4'b0111, s8=4'b1000, s9=4'b1001; 
+    parameter [5:0] Rtype=6'b000000, SW=6'b101011, LW=6'b100011, BEQ=6'b000100, J=6'b000010, HALT=6'b111111; //æŒ‡ä»¤åå¸¸é‡
+    reg [3:0] state, next_state;    //stateä¸ºå½“å‰æ‰€çŠ¶å¤„çš„çŠ¶æ€ï¼Œnext_stateæ˜¯å½“å‰çŠ¶æ€çš„ä¸‹ä¸€ä¸ªçŠ¶æ€
     reg [31:0] count;
     
-    //1.ÏÈ¶Ô¸÷¸öÊä³öĞÅºÅ¼°µ±Ç°½×¶Î½øĞĞ³õÊ¼»¯£¨±¾²¿·Ö´ıºË²é£©
+    //1.å…ˆå¯¹å„ä¸ªè¾“å‡ºä¿¡å·åŠå½“å‰é˜¶æ®µè¿›è¡Œåˆå§‹åŒ–ï¼ˆæœ¬éƒ¨åˆ†å¾…æ ¸æŸ¥ï¼‰
     initial begin
         RegWrite = 0;
         PCWrite = 0;
@@ -50,7 +50,7 @@ module control(
         beat = 5'b00000;
         count=32'h00000000;
     end
-    //2.D´¥·¢Æ÷Ä£¿é£º²¢ĞĞ¶Ôµ±Ç°½×¶Î½øĞĞ¸üĞÂ
+    //2.Dè§¦å‘å™¨æ¨¡å—ï¼šå¹¶è¡Œå¯¹å½“å‰é˜¶æ®µè¿›è¡Œæ›´æ–°
     always @(posedge clk or negedge rst) begin   
         if(rst == 0) begin
             state <= s0;
@@ -60,10 +60,10 @@ module control(
         end  
             //out_state = state;  
     end  
-    //3.½×¶Î×ªÒÆÄ£¿é£ºÈ·¶¨ÏÂÒ»¸ö½×¶Î
+    //3.é˜¶æ®µè½¬ç§»æ¨¡å—ï¼šç¡®å®šä¸‹ä¸€ä¸ªé˜¶æ®µ
     always @(state or opcode) begin
         case(state)
-            //µ±Ç°½×¶Î£ºs0
+            //å½“å‰é˜¶æ®µï¼šs0
             s0: begin
                 beat = 5'b00001;
                 PCWrite = 1;
@@ -82,7 +82,7 @@ module control(
                 next_state = s1;
                 count=count+32'h00000001;
             end
-            //µ±Ç°½×¶Î£ºs1
+            //å½“å‰é˜¶æ®µï¼šs1
             s1: begin
                 beat = 5'b00010;
                 PCWrite = 0;
@@ -106,7 +106,7 @@ module control(
                     J: next_state = s9;
                 endcase
             end
-            //µ±Ç°½×¶Î£ºs2
+            //å½“å‰é˜¶æ®µï¼šs2
             s2: begin
                 beat = 5'b00100;
                 PCWrite = 0;
@@ -128,7 +128,7 @@ module control(
                     default next_state = s2;
                 endcase
             end
-            //µ±Ç°×´Ì¬s3
+            //å½“å‰çŠ¶æ€s3
             s3: begin
                 beat = 5'b01000;
                 PCWrite = 0;
@@ -146,7 +146,7 @@ module control(
                 ALUSrcB = 2'b00;
                 next_state = s4;
             end
-            //µ±Ç°×´Ì¬s4
+            //å½“å‰çŠ¶æ€s4
             s4: begin
                 beat = 5'b10000;
                 PCWrite = 0;
@@ -164,7 +164,7 @@ module control(
                 ALUSrcB = 2'b00;
                 next_state = s0;
             end
-            //µ±Ç°×´Ì¬s5
+            //å½“å‰çŠ¶æ€s5
             s5: begin
                 beat = 5'b01000;
                 PCWrite = 0;
@@ -182,7 +182,7 @@ module control(
                 ALUSrcB = 2'b00;
                 next_state = s0;
             end
-            //µ±Ç°×´Ì¬s6
+            //å½“å‰çŠ¶æ€s6
             s6: begin
                 beat = 5'b00100;
                 PCWrite = 0;
@@ -200,7 +200,7 @@ module control(
                 ALUSrcB = 2'b00;
                 next_state = s7;
             end
-            //µ±Ç°×´Ì¬s7
+            //å½“å‰çŠ¶æ€s7
             s7: begin
                 beat = 5'b01000;
                 PCWrite = 0;
@@ -218,7 +218,7 @@ module control(
                 ALUSrcB = 2'b00;
                 next_state = s0;
             end
-            //µ±Ç°×´Ì¬s8
+            //å½“å‰çŠ¶æ€s8
             s8: begin
                 beat = 5'b00100;
                 PCWrite = 0;
@@ -236,7 +236,7 @@ module control(
                 ALUSrcB = 2'b00;
                 next_state = s0;
             end
-            //µ±Ç°×´Ì¬s9
+            //å½“å‰çŠ¶æ€s9
             s9: begin
                 beat = 5'b00100;
                 PCWrite = 1;
