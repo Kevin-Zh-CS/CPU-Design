@@ -49,10 +49,11 @@ module control(
         PCSource = 2'b00;
         beat = 5'b00000;
         count=32'h00000000;
+		next_state = s0;
     end
     //2.D触发器模块：并行对当前阶段进行更新
     always @(posedge clk or negedge rst) begin   
-        if(rst == 0) begin
+        if(rst) begin
             state <= s0;
         end
         else begin 
