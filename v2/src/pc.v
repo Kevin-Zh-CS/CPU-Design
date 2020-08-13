@@ -9,7 +9,7 @@ module pc(//input
 	input clk,rst,PCWrite,PCWriteCond,zero;
 	input[1:0] PCSource;
 	input[31:0] result,ALUOut;
-	input[26:0] IR_low26;
+	input[25:0] IR_low26;
 	output reg[31:0] PCvalue;
 	
 	reg[31:0] nextPC;
