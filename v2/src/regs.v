@@ -28,11 +28,11 @@ module regs(//input
 	always@(posedge clk or negedge rst)
 	begin
 		if(!rst) begin
-			for(i=0;i<32;i=i+1) regFile[i]<=10;
-		end
-		else begin
 			if((RealRd!=0)&&(RegWrite==1))
 			regFile[RealRd]<=WriteData;
+		end
+		else begin
+			for(i=0;i<32;i=i+1) regFile[i]<=10;
 		end
 	end
 

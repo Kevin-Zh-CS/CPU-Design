@@ -21,9 +21,9 @@ module pc(//input
 	always@(posedge clk or negedge rst)
 	begin
 		if(!rst)
-			PCvalue<=0;
-		else
 			PCvalue<=nextPC;
+		else
+			PCvalue<=0;			
 	end
 	
 	always@*
