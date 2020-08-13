@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=C:\Users\hongx\source\Verilog\v3\impact.xsl
+OUTFILE=C:\Users\hongx\source\Verilog\v3\impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=C:\Users\hongx\source\Verilog\v3
+LICENSE=iMPACT
+USER_INFO=iMPACT
