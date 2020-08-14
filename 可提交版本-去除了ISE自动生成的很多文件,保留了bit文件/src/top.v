@@ -1,27 +1,27 @@
 `timescale 1ns / 1ps
 
 module top(
-	input wire clk,				 	//Ê±ÖÓ
-	input wire RSTN,					//¸´Î»
+	input wire clk,				 	//æ—¶é’Ÿ
+	input wire RSTN,					//å¤ä½
 	
-	input [3:0] BTN_Y,				//°´¼üÊäÈë
+	input [3:0] BTN_Y,				//æŒ‰é”®è¾“å…¥
 	input [7:0] SW,
 	
-	output readn,             		//ÈıÉ«ledµÆ
-	output CR,							//ÈıÉ«ĞÅºÅµÆ
-	output RDY,							//ÈıÉ«ĞÅºÅµÆ
+	output readn,             		//ä¸‰è‰²ledç¯
+	output CR,							//ä¸‰è‰²ä¿¡å·ç¯
+	output RDY,							//ä¸‰è‰²ä¿¡å·ç¯
 	
-	output [4:0] BTN_X,  	      //Êä³ö°´¼ü
+	output [4:0] BTN_X,  	      //è¾“å‡ºæŒ‰é”®
 	
-	output wire led_clk,          //´®ĞĞÒÆÎ»Ê±ÖÓ
-	output wire led_sout,         //´®ĞĞÊä³ö
-	output wire led_clrn,         //LEDÏÔÊ¾ÇåÁã
-	output wire LED_PEN,          //LEDÏÔÊ¾Ë¢ĞÂÊ¹ÄÜ
+	output wire led_clk,          //ä¸²è¡Œç§»ä½æ—¶é’Ÿ
+	output wire led_sout,         //ä¸²è¡Œè¾“å‡º
+	output wire led_clrn,         //LEDæ˜¾ç¤ºæ¸…é›¶
+	output wire LED_PEN,          //LEDæ˜¾ç¤ºåˆ·æ–°ä½¿èƒ½
 
-	output seg_clk,	//´®ĞĞÒÆÎ»Ê±ÖÓ
-	output seg_sout,	//Æß¶ÎÏÔÊ¾Êı¾İ(´®ĞĞÊä³ö)
-	output SEG_PEN,	//Æß¶ÎÂëÏÔÊ¾Ë¢ĞÂÊ¹ÄÜ
-	output seg_clrn,	//Æß¶ÎÂëÏÔÊ¾ÍôÁã);//ÏÔÊ¾7¶ÎÂë	
+	output seg_clk,	//ä¸²è¡Œç§»ä½æ—¶é’Ÿ
+	output seg_sout,	//ä¸ƒæ®µæ˜¾ç¤ºæ•°æ®(ä¸²è¡Œè¾“å‡º)
+	output SEG_PEN,	//ä¸ƒæ®µç æ˜¾ç¤ºåˆ·æ–°ä½¿èƒ½
+	output seg_clrn,	//ä¸ƒæ®µç æ˜¾ç¤ºæ±ªé›¶);//æ˜¾ç¤º7æ®µç 	
 	
 	output Buzzer
 );
@@ -29,7 +29,7 @@ module top(
 	wire[3:0] blink,dots;
 	wire [3:0] BTN_OK;
 	//wire [15:0]SW_OK,
-	wire [31:0] P_Data;          //²¢ĞĞÊäÈë£¬ÓÃÓÚ´®ĞĞÊä³öÊı¾İ
+	wire [31:0] P_Data;          //å¹¶è¡Œè¾“å…¥ï¼Œç”¨äºä¸²è¡Œè¾“å‡ºæ•°æ®
 	wire [31:0] Div;
 	
 	wire RegWrite,PCWrite,IRWrite,PCWriteCond,IorD;
@@ -41,9 +41,9 @@ module top(
 	wire dbgclk,rst_cpu,clk_cpu;
 	reg [3:0] BTN_cnt;
 	
-	clk_div U4(clk,rst,SW2,Div,Clk_CPU);//·ÖÆµ
+	clk_div U4(clk,rst,SW2,Div,Clk_CPU);//åˆ†é¢‘
 	always @ (posedge clk_cpu or posedge rst_cpu) begin
-		if (rst_cpu == 1) //BTN_cntÎªÊ±ÖÓ¼ÆÊı
+		if (rst_cpu == 1) //BTN_cntä¸ºæ—¶é’Ÿè®¡æ•°
 			BTN_cnt = 4'b0;
 		else begin
 			BTN_cnt = BTN_cnt + 1;
@@ -53,13 +53,13 @@ module top(
 	SAnti_jitter U1(clk,RSTN,readn,BTN_Y,BTN_X,Key_out,RDY,pulse_out,BTN_OK,SW_OK,CR,rst);
 	assign dbgclk=BTN_OK[0];
 	assign rst_cpu=BTN_OK[1];
-	assign clk_cpu=(SW[7]==0)?dbgclk:clk; //Ñ¡Ôñ×Ô¶¯Ê±ÖÓ»òÊÖ¶¯Ê±ÖÓ
+	assign clk_cpu=(SW[7]==0)?dbgclk:clk; //é€‰æ‹©è‡ªåŠ¨æ—¶é’Ÿæˆ–æ‰‹åŠ¨æ—¶é’Ÿ
 	
-	SPIO U2(clk,rst,Div[20],1,P_Data,counter_set,LED_out,led_clk,led_sout,led_clrn,LED_PEN,GPIOf0);//ÏÔÊ¾led
+	SPIO U2(clk,rst,Div[20],1,P_Data,counter_set,LED_out,led_clk,led_sout,led_clrn,LED_PEN,GPIOf0);//æ˜¾ç¤ºled
 	assign P_Data[17:2]={{8{0}},dbgclk,clk,rst_cpu,beat};//LED
 	
-	SSeg7_Dev U3(clk,rst,Div[20],1,Div[25],{16'h0000,disp_num},{4'b0000,dots},{4'b0000,blink},seg_clk,seg_sout,SEG_PEN,seg_clrn);//ÏÔÊ¾7¶ÎÂë
-	always@* //¸ù¾İ²¦¶¯¿ª¹ØÑ¡ÔñÆß¶ÎÂëµÄÊä³ö
+	SSeg7_Dev U3(clk,rst,Div[20],1,Div[25],{16'h0000,disp_num},{4'b0000,dots},{4'b0000,blink},seg_clk,seg_sout,SEG_PEN,seg_clrn);//æ˜¾ç¤º7æ®µç 
+	always@* //æ ¹æ®æ‹¨åŠ¨å¼€å…³é€‰æ‹©ä¸ƒæ®µç çš„è¾“å‡º
 	begin
 		if(SW[6:5]==2'b00)begin
 			disp_num[15:0]=dbgContent[15:0];
@@ -73,7 +73,7 @@ module top(
 			6'b000000:disp_num[11:8]=10;
 			6'b101011:disp_num[11:8]=11;
 			6'b100011:disp_num[11:8]=11;
-			6'b000100:disp_num[11:8]=12;
+			6'b000100:disp_num[11:8]=11;//BEQæŒ‡ä»¤åº”ä¸ºIå‹
 			6'b000010:disp_num[11:8]=12;
 			endcase
 			case(beat)
@@ -89,7 +89,7 @@ module top(
 	
 	assign Buzzer = 1;
 	
-	control x_control( //¿ØÖÆÆ÷
+	control x_control( //æ§åˆ¶å™¨
 				.clk(clk_cpu),
 				.rst(rst_cpu),
 				.opcode(IR[31:26]),
@@ -109,7 +109,7 @@ module top(
 				.beat(beat)
 				);
 	
-	memory x_memory( //ÄÚ´æ¶ÁĞ´
+	memory x_memory( //å†…å­˜è¯»å†™
 				.clk(clk_cpu),
 				.MemRead(MemRead),
 				.MemWrite(MemWrite),
@@ -122,7 +122,7 @@ module top(
 				.IR(IR)
 				);
 	
-	pc x_pc( //PC¼Ä´æÆ÷¶ÁĞ´
+	pc x_pc( //PCå¯„å­˜å™¨è¯»å†™
 			.clk(clk_cpu),
 			.rst(rst_cpu),
 			.PCWrite(PCWrite),
@@ -151,7 +151,7 @@ module top(
 				.zero(ALUZero)
 				);
 							
-	regs x_regs( //¼Ä´æÆ÷×é
+	regs x_regs( //å¯„å­˜å™¨ç»„
 				.clk(clk_cpu),
 				.rst(rst_cpu),
 				.RegDst(RegDst),
