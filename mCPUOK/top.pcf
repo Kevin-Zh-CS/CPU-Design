@@ -1,0 +1,657 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Aug 14 15:24:59 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "seg_clk" LOCATE = SITE "M24" LEVEL 1;
+COMP "BTN_X<4>" LOCATE = SITE "W16" LEVEL 1;
+COMP "BTN_X<3>" LOCATE = SITE "W15" LEVEL 1;
+COMP "BTN_X<2>" LOCATE = SITE "W19" LEVEL 1;
+COMP "BTN_X<1>" LOCATE = SITE "W18" LEVEL 1;
+COMP "BTN_X<0>" LOCATE = SITE "V17" LEVEL 1;
+COMP "CR" LOCATE = SITE "V22" LEVEL 1;
+COMP "seg_clrn" LOCATE = SITE "M20" LEVEL 1;
+COMP "RDY" LOCATE = SITE "U21" LEVEL 1;
+COMP "Buzzer" LOCATE = SITE "AF24" LEVEL 1;
+COMP "led_sout" LOCATE = SITE "M26" LEVEL 1;
+COMP "LED_PEN" LOCATE = SITE "P18" LEVEL 1;
+COMP "BTN_Y<3>" LOCATE = SITE "W14" LEVEL 1;
+COMP "BTN_Y<2>" LOCATE = SITE "V14" LEVEL 1;
+COMP "BTN_Y<1>" LOCATE = SITE "V19" LEVEL 1;
+COMP "BTN_Y<0>" LOCATE = SITE "V18" LEVEL 1;
+COMP "led_clk" LOCATE = SITE "N26" LEVEL 1;
+COMP "readn" LOCATE = SITE "U22" LEVEL 1;
+COMP "seg_sout" LOCATE = SITE "L24" LEVEL 1;
+COMP "clk" LOCATE = SITE "AC18" LEVEL 1;
+COMP "SEG_PEN" LOCATE = SITE "R18" LEVEL 1;
+COMP "SW<0>" LOCATE = SITE "AA10" LEVEL 1;
+COMP "SW<1>" LOCATE = SITE "AB10" LEVEL 1;
+COMP "SW<2>" LOCATE = SITE "AA13" LEVEL 1;
+COMP "SW<3>" LOCATE = SITE "AA12" LEVEL 1;
+COMP "SW<4>" LOCATE = SITE "Y13" LEVEL 1;
+COMP "SW<5>" LOCATE = SITE "Y12" LEVEL 1;
+COMP "SW<6>" LOCATE = SITE "AD11" LEVEL 1;
+COMP "SW<7>" LOCATE = SITE "AD10" LEVEL 1;
+COMP "led_clrn" LOCATE = SITE "N24" LEVEL 1;
+COMP "RSTN" LOCATE = SITE "W13" LEVEL 1;
+PIN
+        x_memory/ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram_pins<32>
+        = BEL
+        "x_memory/ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram"
+        PINNAME CLKARDCLK;
+PIN
+        x_memory/ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram_pins<33>
+        = BEL
+        "x_memory/ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram"
+        PINNAME CLKBWRCLK;
+TIMEGRP TM_CLK = BEL "U4/clkdiv_0" BEL "U4/clkdiv_1" BEL "U4/clkdiv_2" BEL
+        "U4/clkdiv_3" BEL "U4/clkdiv_4" BEL "U4/clkdiv_5" BEL "U4/clkdiv_6"
+        BEL "U4/clkdiv_7" BEL "U4/clkdiv_8" BEL "U4/clkdiv_9" BEL
+        "U4/clkdiv_10" BEL "U4/clkdiv_11" BEL "U4/clkdiv_12" BEL
+        "U4/clkdiv_13" BEL "U4/clkdiv_14" BEL "U4/clkdiv_15" BEL
+        "U4/clkdiv_16" BEL "U4/clkdiv_17" BEL "U4/clkdiv_18" BEL
+        "U4/clkdiv_19" BEL "U4/clkdiv_20" BEL "BTN_cnt_0" BEL "BTN_cnt_1" BEL
+        "BTN_cnt_2" BEL "BTN_cnt_3" BEL "x_regs/rsContent_31" BEL
+        "x_regs/rsContent_30" BEL "x_regs/rsContent_29" BEL
+        "x_regs/rsContent_28" BEL "x_regs/rsContent_27" BEL
+        "x_regs/rsContent_26" BEL "x_regs/rsContent_25" BEL
+        "x_regs/rsContent_24" BEL "x_regs/rsContent_23" BEL
+        "x_regs/rsContent_22" BEL "x_regs/rsContent_21" BEL
+        "x_regs/rsContent_20" BEL "x_regs/rsContent_19" BEL
+        "x_regs/rsContent_18" BEL "x_regs/rsContent_17" BEL
+        "x_regs/rsContent_16" BEL "x_regs/rsContent_15" BEL
+        "x_regs/rsContent_14" BEL "x_regs/rsContent_13" BEL
+        "x_regs/rsContent_12" BEL "x_regs/rsContent_11" BEL
+        "x_regs/rsContent_10" BEL "x_regs/rsContent_9" BEL
+        "x_regs/rsContent_8" BEL "x_regs/rsContent_7" BEL "x_regs/rsContent_6"
+        BEL "x_regs/rsContent_5" BEL "x_regs/rsContent_4" BEL
+        "x_regs/rsContent_3" BEL "x_regs/rsContent_2" BEL "x_regs/rsContent_1"
+        BEL "x_regs/rsContent_0" BEL "x_regs/rtContent_31" BEL
+        "x_regs/rtContent_30" BEL "x_regs/rtContent_29" BEL
+        "x_regs/rtContent_28" BEL "x_regs/rtContent_27" BEL
+        "x_regs/rtContent_26" BEL "x_regs/rtContent_25" BEL
+        "x_regs/rtContent_24" BEL "x_regs/rtContent_23" BEL
+        "x_regs/rtContent_22" BEL "x_regs/rtContent_21" BEL
+        "x_regs/rtContent_20" BEL "x_regs/rtContent_19" BEL
+        "x_regs/rtContent_18" BEL "x_regs/rtContent_17" BEL
+        "x_regs/rtContent_16" BEL "x_regs/rtContent_15" BEL
+        "x_regs/rtContent_14" BEL "x_regs/rtContent_13" BEL
+        "x_regs/rtContent_12" BEL "x_regs/rtContent_11" BEL
+        "x_regs/rtContent_10" BEL "x_regs/rtContent_9" BEL
+        "x_regs/rtContent_8" BEL "x_regs/rtContent_7" BEL "x_regs/rtContent_6"
+        BEL "x_regs/rtContent_5" BEL "x_regs/rtContent_4" BEL
+        "x_regs/rtContent_3" BEL "x_regs/rtContent_2" BEL "x_regs/rtContent_1"
+        BEL "x_regs/rtContent_0" BEL "x_regs/regFile_0_1023" BEL
+        "x_regs/regFile_0_1022" BEL "x_regs/regFile_0_1021" BEL
+        "x_regs/regFile_0_1020" BEL "x_regs/regFile_0_1019" BEL
+        "x_regs/regFile_0_1018" BEL "x_regs/regFile_0_1017" BEL
+        "x_regs/regFile_0_1016" BEL "x_regs/regFile_0_1015" BEL
+        "x_regs/regFile_0_1014" BEL "x_regs/regFile_0_1013" BEL
+        "x_regs/regFile_0_1012" BEL "x_regs/regFile_0_1011" BEL
+        "x_regs/regFile_0_1010" BEL "x_regs/regFile_0_1009" BEL
+        "x_regs/regFile_0_1008" BEL "x_regs/regFile_0_1007" BEL
+        "x_regs/regFile_0_1006" BEL "x_regs/regFile_0_1005" BEL
+        "x_regs/regFile_0_1004" BEL "x_regs/regFile_0_1003" BEL
+        "x_regs/regFile_0_1002" BEL "x_regs/regFile_0_1001" BEL
+        "x_regs/regFile_0_1000" BEL "x_regs/regFile_0_999" BEL
+        "x_regs/regFile_0_998" BEL "x_regs/regFile_0_997" BEL
+        "x_regs/regFile_0_996" BEL "x_regs/regFile_0_995" BEL
+        "x_regs/regFile_0_994" BEL "x_regs/regFile_0_993" BEL
+        "x_regs/regFile_0_992" BEL "x_regs/regFile_0_991" BEL
+        "x_regs/regFile_0_990" BEL "x_regs/regFile_0_989" BEL
+        "x_regs/regFile_0_988" BEL "x_regs/regFile_0_987" BEL
+        "x_regs/regFile_0_986" BEL "x_regs/regFile_0_985" BEL
+        "x_regs/regFile_0_984" BEL "x_regs/regFile_0_983" BEL
+        "x_regs/regFile_0_982" BEL "x_regs/regFile_0_981" BEL
+        "x_regs/regFile_0_980" BEL "x_regs/regFile_0_979" BEL
+        "x_regs/regFile_0_978" BEL "x_regs/regFile_0_977" BEL
+        "x_regs/regFile_0_976" BEL "x_regs/regFile_0_975" BEL
+        "x_regs/regFile_0_974" BEL "x_regs/regFile_0_973" BEL
+        "x_regs/regFile_0_972" BEL "x_regs/regFile_0_971" BEL
+        "x_regs/regFile_0_970" BEL "x_regs/regFile_0_969" BEL
+        "x_regs/regFile_0_968" BEL "x_regs/regFile_0_967" BEL
+        "x_regs/regFile_0_966" BEL "x_regs/regFile_0_965" BEL
+        "x_regs/regFile_0_964" BEL "x_regs/regFile_0_963" BEL
+        "x_regs/regFile_0_962" BEL "x_regs/regFile_0_961" BEL
+        "x_regs/regFile_0_960" BEL "x_regs/regFile_0_959" BEL
+        "x_regs/regFile_0_958" BEL "x_regs/regFile_0_957" BEL
+        "x_regs/regFile_0_956" BEL "x_regs/regFile_0_955" BEL
+        "x_regs/regFile_0_954" BEL "x_regs/regFile_0_953" BEL
+        "x_regs/regFile_0_952" BEL "x_regs/regFile_0_951" BEL
+        "x_regs/regFile_0_950" BEL "x_regs/regFile_0_949" BEL
+        "x_regs/regFile_0_948" BEL "x_regs/regFile_0_947" BEL
+        "x_regs/regFile_0_946" BEL "x_regs/regFile_0_945" BEL
+        "x_regs/regFile_0_944" BEL "x_regs/regFile_0_943" BEL
+        "x_regs/regFile_0_942" BEL "x_regs/regFile_0_941" BEL
+        "x_regs/regFile_0_940" BEL "x_regs/regFile_0_939" BEL
+        "x_regs/regFile_0_938" BEL "x_regs/regFile_0_937" BEL
+        "x_regs/regFile_0_936" BEL "x_regs/regFile_0_935" BEL
+        "x_regs/regFile_0_934" BEL "x_regs/regFile_0_933" BEL
+        "x_regs/regFile_0_932" BEL "x_regs/regFile_0_931" BEL
+        "x_regs/regFile_0_930" BEL "x_regs/regFile_0_929" BEL
+        "x_regs/regFile_0_928" BEL "x_regs/regFile_0_927" BEL
+        "x_regs/regFile_0_926" BEL "x_regs/regFile_0_925" BEL
+        "x_regs/regFile_0_924" BEL "x_regs/regFile_0_923" BEL
+        "x_regs/regFile_0_922" BEL "x_regs/regFile_0_921" BEL
+        "x_regs/regFile_0_920" BEL "x_regs/regFile_0_919" BEL
+        "x_regs/regFile_0_918" BEL "x_regs/regFile_0_917" BEL
+        "x_regs/regFile_0_916" BEL "x_regs/regFile_0_915" BEL
+        "x_regs/regFile_0_914" BEL "x_regs/regFile_0_913" BEL
+        "x_regs/regFile_0_912" BEL "x_regs/regFile_0_911" BEL
+        "x_regs/regFile_0_910" BEL "x_regs/regFile_0_909" BEL
+        "x_regs/regFile_0_908" BEL "x_regs/regFile_0_907" BEL
+        "x_regs/regFile_0_906" BEL "x_regs/regFile_0_905" BEL
+        "x_regs/regFile_0_904" BEL "x_regs/regFile_0_903" BEL
+        "x_regs/regFile_0_902" BEL "x_regs/regFile_0_901" BEL
+        "x_regs/regFile_0_900" BEL "x_regs/regFile_0_899" BEL
+        "x_regs/regFile_0_898" BEL "x_regs/regFile_0_897" BEL
+        "x_regs/regFile_0_896" BEL "x_regs/regFile_0_895" BEL
+        "x_regs/regFile_0_894" BEL "x_regs/regFile_0_893" BEL
+        "x_regs/regFile_0_892" BEL "x_regs/regFile_0_891" BEL
+        "x_regs/regFile_0_890" BEL "x_regs/regFile_0_889" BEL
+        "x_regs/regFile_0_888" BEL "x_regs/regFile_0_887" BEL
+        "x_regs/regFile_0_886" BEL "x_regs/regFile_0_885" BEL
+        "x_regs/regFile_0_884" BEL "x_regs/regFile_0_883" BEL
+        "x_regs/regFile_0_882" BEL "x_regs/regFile_0_881" BEL
+        "x_regs/regFile_0_880" BEL "x_regs/regFile_0_879" BEL
+        "x_regs/regFile_0_878" BEL "x_regs/regFile_0_877" BEL
+        "x_regs/regFile_0_876" BEL "x_regs/regFile_0_875" BEL
+        "x_regs/regFile_0_874" BEL "x_regs/regFile_0_873" BEL
+        "x_regs/regFile_0_872" BEL "x_regs/regFile_0_871" BEL
+        "x_regs/regFile_0_870" BEL "x_regs/regFile_0_869" BEL
+        "x_regs/regFile_0_868" BEL "x_regs/regFile_0_867" BEL
+        "x_regs/regFile_0_866" BEL "x_regs/regFile_0_865" BEL
+        "x_regs/regFile_0_864" BEL "x_regs/regFile_0_863" BEL
+        "x_regs/regFile_0_862" BEL "x_regs/regFile_0_861" BEL
+        "x_regs/regFile_0_860" BEL "x_regs/regFile_0_859" BEL
+        "x_regs/regFile_0_858" BEL "x_regs/regFile_0_857" BEL
+        "x_regs/regFile_0_856" BEL "x_regs/regFile_0_855" BEL
+        "x_regs/regFile_0_854" BEL "x_regs/regFile_0_853" BEL
+        "x_regs/regFile_0_852" BEL "x_regs/regFile_0_851" BEL
+        "x_regs/regFile_0_850" BEL "x_regs/regFile_0_849" BEL
+        "x_regs/regFile_0_848" BEL "x_regs/regFile_0_847" BEL
+        "x_regs/regFile_0_846" BEL "x_regs/regFile_0_845" BEL
+        "x_regs/regFile_0_844" BEL "x_regs/regFile_0_843" BEL
+        "x_regs/regFile_0_842" BEL "x_regs/regFile_0_841" BEL
+        "x_regs/regFile_0_840" BEL "x_regs/regFile_0_839" BEL
+        "x_regs/regFile_0_838" BEL "x_regs/regFile_0_837" BEL
+        "x_regs/regFile_0_836" BEL "x_regs/regFile_0_835" BEL
+        "x_regs/regFile_0_834" BEL "x_regs/regFile_0_833" BEL
+        "x_regs/regFile_0_832" BEL "x_regs/regFile_0_831" BEL
+        "x_regs/regFile_0_830" BEL "x_regs/regFile_0_829" BEL
+        "x_regs/regFile_0_828" BEL "x_regs/regFile_0_827" BEL
+        "x_regs/regFile_0_826" BEL "x_regs/regFile_0_825" BEL
+        "x_regs/regFile_0_824" BEL "x_regs/regFile_0_823" BEL
+        "x_regs/regFile_0_822" BEL "x_regs/regFile_0_821" BEL
+        "x_regs/regFile_0_820" BEL "x_regs/regFile_0_819" BEL
+        "x_regs/regFile_0_818" BEL "x_regs/regFile_0_817" BEL
+        "x_regs/regFile_0_816" BEL "x_regs/regFile_0_815" BEL
+        "x_regs/regFile_0_814" BEL "x_regs/regFile_0_813" BEL
+        "x_regs/regFile_0_812" BEL "x_regs/regFile_0_811" BEL
+        "x_regs/regFile_0_810" BEL "x_regs/regFile_0_809" BEL
+        "x_regs/regFile_0_808" BEL "x_regs/regFile_0_807" BEL
+        "x_regs/regFile_0_806" BEL "x_regs/regFile_0_805" BEL
+        "x_regs/regFile_0_804" BEL "x_regs/regFile_0_803" BEL
+        "x_regs/regFile_0_802" BEL "x_regs/regFile_0_801" BEL
+        "x_regs/regFile_0_800" BEL "x_regs/regFile_0_799" BEL
+        "x_regs/regFile_0_798" BEL "x_regs/regFile_0_797" BEL
+        "x_regs/regFile_0_796" BEL "x_regs/regFile_0_795" BEL
+        "x_regs/regFile_0_794" BEL "x_regs/regFile_0_793" BEL
+        "x_regs/regFile_0_792" BEL "x_regs/regFile_0_791" BEL
+        "x_regs/regFile_0_790" BEL "x_regs/regFile_0_789" BEL
+        "x_regs/regFile_0_788" BEL "x_regs/regFile_0_787" BEL
+        "x_regs/regFile_0_786" BEL "x_regs/regFile_0_785" BEL
+        "x_regs/regFile_0_784" BEL "x_regs/regFile_0_783" BEL
+        "x_regs/regFile_0_782" BEL "x_regs/regFile_0_781" BEL
+        "x_regs/regFile_0_780" BEL "x_regs/regFile_0_779" BEL
+        "x_regs/regFile_0_778" BEL "x_regs/regFile_0_777" BEL
+        "x_regs/regFile_0_776" BEL "x_regs/regFile_0_775" BEL
+        "x_regs/regFile_0_774" BEL "x_regs/regFile_0_773" BEL
+        "x_regs/regFile_0_772" BEL "x_regs/regFile_0_771" BEL
+        "x_regs/regFile_0_770" BEL "x_regs/regFile_0_769" BEL
+        "x_regs/regFile_0_768" BEL "x_regs/regFile_0_767" BEL
+        "x_regs/regFile_0_766" BEL "x_regs/regFile_0_765" BEL
+        "x_regs/regFile_0_764" BEL "x_regs/regFile_0_763" BEL
+        "x_regs/regFile_0_762" BEL "x_regs/regFile_0_761" BEL
+        "x_regs/regFile_0_760" BEL "x_regs/regFile_0_759" BEL
+        "x_regs/regFile_0_758" BEL "x_regs/regFile_0_757" BEL
+        "x_regs/regFile_0_756" BEL "x_regs/regFile_0_755" BEL
+        "x_regs/regFile_0_754" BEL "x_regs/regFile_0_753" BEL
+        "x_regs/regFile_0_752" BEL "x_regs/regFile_0_751" BEL
+        "x_regs/regFile_0_750" BEL "x_regs/regFile_0_749" BEL
+        "x_regs/regFile_0_748" BEL "x_regs/regFile_0_747" BEL
+        "x_regs/regFile_0_746" BEL "x_regs/regFile_0_745" BEL
+        "x_regs/regFile_0_744" BEL "x_regs/regFile_0_743" BEL
+        "x_regs/regFile_0_742" BEL "x_regs/regFile_0_741" BEL
+        "x_regs/regFile_0_740" BEL "x_regs/regFile_0_739" BEL
+        "x_regs/regFile_0_738" BEL "x_regs/regFile_0_737" BEL
+        "x_regs/regFile_0_736" BEL "x_regs/regFile_0_735" BEL
+        "x_regs/regFile_0_734" BEL "x_regs/regFile_0_733" BEL
+        "x_regs/regFile_0_732" BEL "x_regs/regFile_0_731" BEL
+        "x_regs/regFile_0_730" BEL "x_regs/regFile_0_729" BEL
+        "x_regs/regFile_0_728" BEL "x_regs/regFile_0_727" BEL
+        "x_regs/regFile_0_726" BEL "x_regs/regFile_0_725" BEL
+        "x_regs/regFile_0_724" BEL "x_regs/regFile_0_723" BEL
+        "x_regs/regFile_0_722" BEL "x_regs/regFile_0_721" BEL
+        "x_regs/regFile_0_720" BEL "x_regs/regFile_0_719" BEL
+        "x_regs/regFile_0_718" BEL "x_regs/regFile_0_717" BEL
+        "x_regs/regFile_0_716" BEL "x_regs/regFile_0_715" BEL
+        "x_regs/regFile_0_714" BEL "x_regs/regFile_0_713" BEL
+        "x_regs/regFile_0_712" BEL "x_regs/regFile_0_711" BEL
+        "x_regs/regFile_0_710" BEL "x_regs/regFile_0_709" BEL
+        "x_regs/regFile_0_708" BEL "x_regs/regFile_0_707" BEL
+        "x_regs/regFile_0_706" BEL "x_regs/regFile_0_705" BEL
+        "x_regs/regFile_0_704" BEL "x_regs/regFile_0_703" BEL
+        "x_regs/regFile_0_702" BEL "x_regs/regFile_0_701" BEL
+        "x_regs/regFile_0_700" BEL "x_regs/regFile_0_699" BEL
+        "x_regs/regFile_0_698" BEL "x_regs/regFile_0_697" BEL
+        "x_regs/regFile_0_696" BEL "x_regs/regFile_0_695" BEL
+        "x_regs/regFile_0_694" BEL "x_regs/regFile_0_693" BEL
+        "x_regs/regFile_0_692" BEL "x_regs/regFile_0_691" BEL
+        "x_regs/regFile_0_690" BEL "x_regs/regFile_0_689" BEL
+        "x_regs/regFile_0_688" BEL "x_regs/regFile_0_687" BEL
+        "x_regs/regFile_0_686" BEL "x_regs/regFile_0_685" BEL
+        "x_regs/regFile_0_684" BEL "x_regs/regFile_0_683" BEL
+        "x_regs/regFile_0_682" BEL "x_regs/regFile_0_681" BEL
+        "x_regs/regFile_0_680" BEL "x_regs/regFile_0_679" BEL
+        "x_regs/regFile_0_678" BEL "x_regs/regFile_0_677" BEL
+        "x_regs/regFile_0_676" BEL "x_regs/regFile_0_675" BEL
+        "x_regs/regFile_0_674" BEL "x_regs/regFile_0_673" BEL
+        "x_regs/regFile_0_672" BEL "x_regs/regFile_0_671" BEL
+        "x_regs/regFile_0_670" BEL "x_regs/regFile_0_669" BEL
+        "x_regs/regFile_0_668" BEL "x_regs/regFile_0_667" BEL
+        "x_regs/regFile_0_666" BEL "x_regs/regFile_0_665" BEL
+        "x_regs/regFile_0_664" BEL "x_regs/regFile_0_663" BEL
+        "x_regs/regFile_0_662" BEL "x_regs/regFile_0_661" BEL
+        "x_regs/regFile_0_660" BEL "x_regs/regFile_0_659" BEL
+        "x_regs/regFile_0_658" BEL "x_regs/regFile_0_657" BEL
+        "x_regs/regFile_0_656" BEL "x_regs/regFile_0_655" BEL
+        "x_regs/regFile_0_654" BEL "x_regs/regFile_0_653" BEL
+        "x_regs/regFile_0_652" BEL "x_regs/regFile_0_651" BEL
+        "x_regs/regFile_0_650" BEL "x_regs/regFile_0_649" BEL
+        "x_regs/regFile_0_648" BEL "x_regs/regFile_0_647" BEL
+        "x_regs/regFile_0_646" BEL "x_regs/regFile_0_645" BEL
+        "x_regs/regFile_0_644" BEL "x_regs/regFile_0_643" BEL
+        "x_regs/regFile_0_642" BEL "x_regs/regFile_0_641" BEL
+        "x_regs/regFile_0_640" BEL "x_regs/regFile_0_639" BEL
+        "x_regs/regFile_0_638" BEL "x_regs/regFile_0_637" BEL
+        "x_regs/regFile_0_636" BEL "x_regs/regFile_0_635" BEL
+        "x_regs/regFile_0_634" BEL "x_regs/regFile_0_633" BEL
+        "x_regs/regFile_0_632" BEL "x_regs/regFile_0_631" BEL
+        "x_regs/regFile_0_630" BEL "x_regs/regFile_0_629" BEL
+        "x_regs/regFile_0_628" BEL "x_regs/regFile_0_627" BEL
+        "x_regs/regFile_0_626" BEL "x_regs/regFile_0_625" BEL
+        "x_regs/regFile_0_624" BEL "x_regs/regFile_0_623" BEL
+        "x_regs/regFile_0_622" BEL "x_regs/regFile_0_621" BEL
+        "x_regs/regFile_0_620" BEL "x_regs/regFile_0_619" BEL
+        "x_regs/regFile_0_618" BEL "x_regs/regFile_0_617" BEL
+        "x_regs/regFile_0_616" BEL "x_regs/regFile_0_615" BEL
+        "x_regs/regFile_0_614" BEL "x_regs/regFile_0_613" BEL
+        "x_regs/regFile_0_612" BEL "x_regs/regFile_0_611" BEL
+        "x_regs/regFile_0_610" BEL "x_regs/regFile_0_609" BEL
+        "x_regs/regFile_0_608" BEL "x_regs/regFile_0_607" BEL
+        "x_regs/regFile_0_606" BEL "x_regs/regFile_0_605" BEL
+        "x_regs/regFile_0_604" BEL "x_regs/regFile_0_603" BEL
+        "x_regs/regFile_0_602" BEL "x_regs/regFile_0_601" BEL
+        "x_regs/regFile_0_600" BEL "x_regs/regFile_0_599" BEL
+        "x_regs/regFile_0_598" BEL "x_regs/regFile_0_597" BEL
+        "x_regs/regFile_0_596" BEL "x_regs/regFile_0_595" BEL
+        "x_regs/regFile_0_594" BEL "x_regs/regFile_0_593" BEL
+        "x_regs/regFile_0_592" BEL "x_regs/regFile_0_591" BEL
+        "x_regs/regFile_0_590" BEL "x_regs/regFile_0_589" BEL
+        "x_regs/regFile_0_588" BEL "x_regs/regFile_0_587" BEL
+        "x_regs/regFile_0_586" BEL "x_regs/regFile_0_585" BEL
+        "x_regs/regFile_0_584" BEL "x_regs/regFile_0_583" BEL
+        "x_regs/regFile_0_582" BEL "x_regs/regFile_0_581" BEL
+        "x_regs/regFile_0_580" BEL "x_regs/regFile_0_579" BEL
+        "x_regs/regFile_0_578" BEL "x_regs/regFile_0_577" BEL
+        "x_regs/regFile_0_576" BEL "x_regs/regFile_0_575" BEL
+        "x_regs/regFile_0_574" BEL "x_regs/regFile_0_573" BEL
+        "x_regs/regFile_0_572" BEL "x_regs/regFile_0_571" BEL
+        "x_regs/regFile_0_570" BEL "x_regs/regFile_0_569" BEL
+        "x_regs/regFile_0_568" BEL "x_regs/regFile_0_567" BEL
+        "x_regs/regFile_0_566" BEL "x_regs/regFile_0_565" BEL
+        "x_regs/regFile_0_564" BEL "x_regs/regFile_0_563" BEL
+        "x_regs/regFile_0_562" BEL "x_regs/regFile_0_561" BEL
+        "x_regs/regFile_0_560" BEL "x_regs/regFile_0_559" BEL
+        "x_regs/regFile_0_558" BEL "x_regs/regFile_0_557" BEL
+        "x_regs/regFile_0_556" BEL "x_regs/regFile_0_555" BEL
+        "x_regs/regFile_0_554" BEL "x_regs/regFile_0_553" BEL
+        "x_regs/regFile_0_552" BEL "x_regs/regFile_0_551" BEL
+        "x_regs/regFile_0_550" BEL "x_regs/regFile_0_549" BEL
+        "x_regs/regFile_0_548" BEL "x_regs/regFile_0_547" BEL
+        "x_regs/regFile_0_546" BEL "x_regs/regFile_0_545" BEL
+        "x_regs/regFile_0_544" BEL "x_regs/regFile_0_543" BEL
+        "x_regs/regFile_0_542" BEL "x_regs/regFile_0_541" BEL
+        "x_regs/regFile_0_540" BEL "x_regs/regFile_0_539" BEL
+        "x_regs/regFile_0_538" BEL "x_regs/regFile_0_537" BEL
+        "x_regs/regFile_0_536" BEL "x_regs/regFile_0_535" BEL
+        "x_regs/regFile_0_534" BEL "x_regs/regFile_0_533" BEL
+        "x_regs/regFile_0_532" BEL "x_regs/regFile_0_531" BEL
+        "x_regs/regFile_0_530" BEL "x_regs/regFile_0_529" BEL
+        "x_regs/regFile_0_528" BEL "x_regs/regFile_0_527" BEL
+        "x_regs/regFile_0_526" BEL "x_regs/regFile_0_525" BEL
+        "x_regs/regFile_0_524" BEL "x_regs/regFile_0_523" BEL
+        "x_regs/regFile_0_522" BEL "x_regs/regFile_0_521" BEL
+        "x_regs/regFile_0_520" BEL "x_regs/regFile_0_519" BEL
+        "x_regs/regFile_0_518" BEL "x_regs/regFile_0_517" BEL
+        "x_regs/regFile_0_516" BEL "x_regs/regFile_0_515" BEL
+        "x_regs/regFile_0_514" BEL "x_regs/regFile_0_513" BEL
+        "x_regs/regFile_0_512" BEL "x_regs/regFile_0_511" BEL
+        "x_regs/regFile_0_510" BEL "x_regs/regFile_0_509" BEL
+        "x_regs/regFile_0_508" BEL "x_regs/regFile_0_507" BEL
+        "x_regs/regFile_0_506" BEL "x_regs/regFile_0_505" BEL
+        "x_regs/regFile_0_504" BEL "x_regs/regFile_0_503" BEL
+        "x_regs/regFile_0_502" BEL "x_regs/regFile_0_501" BEL
+        "x_regs/regFile_0_500" BEL "x_regs/regFile_0_499" BEL
+        "x_regs/regFile_0_498" BEL "x_regs/regFile_0_497" BEL
+        "x_regs/regFile_0_496" BEL "x_regs/regFile_0_495" BEL
+        "x_regs/regFile_0_494" BEL "x_regs/regFile_0_493" BEL
+        "x_regs/regFile_0_492" BEL "x_regs/regFile_0_491" BEL
+        "x_regs/regFile_0_490" BEL "x_regs/regFile_0_489" BEL
+        "x_regs/regFile_0_488" BEL "x_regs/regFile_0_487" BEL
+        "x_regs/regFile_0_486" BEL "x_regs/regFile_0_485" BEL
+        "x_regs/regFile_0_484" BEL "x_regs/regFile_0_483" BEL
+        "x_regs/regFile_0_482" BEL "x_regs/regFile_0_481" BEL
+        "x_regs/regFile_0_480" BEL "x_regs/regFile_0_479" BEL
+        "x_regs/regFile_0_478" BEL "x_regs/regFile_0_477" BEL
+        "x_regs/regFile_0_476" BEL "x_regs/regFile_0_475" BEL
+        "x_regs/regFile_0_474" BEL "x_regs/regFile_0_473" BEL
+        "x_regs/regFile_0_472" BEL "x_regs/regFile_0_471" BEL
+        "x_regs/regFile_0_470" BEL "x_regs/regFile_0_469" BEL
+        "x_regs/regFile_0_468" BEL "x_regs/regFile_0_467" BEL
+        "x_regs/regFile_0_466" BEL "x_regs/regFile_0_465" BEL
+        "x_regs/regFile_0_464" BEL "x_regs/regFile_0_463" BEL
+        "x_regs/regFile_0_462" BEL "x_regs/regFile_0_461" BEL
+        "x_regs/regFile_0_460" BEL "x_regs/regFile_0_459" BEL
+        "x_regs/regFile_0_458" BEL "x_regs/regFile_0_457" BEL
+        "x_regs/regFile_0_456" BEL "x_regs/regFile_0_455" BEL
+        "x_regs/regFile_0_454" BEL "x_regs/regFile_0_453" BEL
+        "x_regs/regFile_0_452" BEL "x_regs/regFile_0_451" BEL
+        "x_regs/regFile_0_450" BEL "x_regs/regFile_0_449" BEL
+        "x_regs/regFile_0_448" BEL "x_regs/regFile_0_447" BEL
+        "x_regs/regFile_0_446" BEL "x_regs/regFile_0_445" BEL
+        "x_regs/regFile_0_444" BEL "x_regs/regFile_0_443" BEL
+        "x_regs/regFile_0_442" BEL "x_regs/regFile_0_441" BEL
+        "x_regs/regFile_0_440" BEL "x_regs/regFile_0_439" BEL
+        "x_regs/regFile_0_438" BEL "x_regs/regFile_0_437" BEL
+        "x_regs/regFile_0_436" BEL "x_regs/regFile_0_435" BEL
+        "x_regs/regFile_0_434" BEL "x_regs/regFile_0_433" BEL
+        "x_regs/regFile_0_432" BEL "x_regs/regFile_0_431" BEL
+        "x_regs/regFile_0_430" BEL "x_regs/regFile_0_429" BEL
+        "x_regs/regFile_0_428" BEL "x_regs/regFile_0_427" BEL
+        "x_regs/regFile_0_426" BEL "x_regs/regFile_0_425" BEL
+        "x_regs/regFile_0_424" BEL "x_regs/regFile_0_423" BEL
+        "x_regs/regFile_0_422" BEL "x_regs/regFile_0_421" BEL
+        "x_regs/regFile_0_420" BEL "x_regs/regFile_0_419" BEL
+        "x_regs/regFile_0_418" BEL "x_regs/regFile_0_417" BEL
+        "x_regs/regFile_0_416" BEL "x_regs/regFile_0_415" BEL
+        "x_regs/regFile_0_414" BEL "x_regs/regFile_0_413" BEL
+        "x_regs/regFile_0_412" BEL "x_regs/regFile_0_411" BEL
+        "x_regs/regFile_0_410" BEL "x_regs/regFile_0_409" BEL
+        "x_regs/regFile_0_408" BEL "x_regs/regFile_0_407" BEL
+        "x_regs/regFile_0_406" BEL "x_regs/regFile_0_405" BEL
+        "x_regs/regFile_0_404" BEL "x_regs/regFile_0_403" BEL
+        "x_regs/regFile_0_402" BEL "x_regs/regFile_0_401" BEL
+        "x_regs/regFile_0_400" BEL "x_regs/regFile_0_399" BEL
+        "x_regs/regFile_0_398" BEL "x_regs/regFile_0_397" BEL
+        "x_regs/regFile_0_396" BEL "x_regs/regFile_0_395" BEL
+        "x_regs/regFile_0_394" BEL "x_regs/regFile_0_393" BEL
+        "x_regs/regFile_0_392" BEL "x_regs/regFile_0_391" BEL
+        "x_regs/regFile_0_390" BEL "x_regs/regFile_0_389" BEL
+        "x_regs/regFile_0_388" BEL "x_regs/regFile_0_387" BEL
+        "x_regs/regFile_0_386" BEL "x_regs/regFile_0_385" BEL
+        "x_regs/regFile_0_384" BEL "x_regs/regFile_0_383" BEL
+        "x_regs/regFile_0_382" BEL "x_regs/regFile_0_381" BEL
+        "x_regs/regFile_0_380" BEL "x_regs/regFile_0_379" BEL
+        "x_regs/regFile_0_378" BEL "x_regs/regFile_0_377" BEL
+        "x_regs/regFile_0_376" BEL "x_regs/regFile_0_375" BEL
+        "x_regs/regFile_0_374" BEL "x_regs/regFile_0_373" BEL
+        "x_regs/regFile_0_372" BEL "x_regs/regFile_0_371" BEL
+        "x_regs/regFile_0_370" BEL "x_regs/regFile_0_369" BEL
+        "x_regs/regFile_0_368" BEL "x_regs/regFile_0_367" BEL
+        "x_regs/regFile_0_366" BEL "x_regs/regFile_0_365" BEL
+        "x_regs/regFile_0_364" BEL "x_regs/regFile_0_363" BEL
+        "x_regs/regFile_0_362" BEL "x_regs/regFile_0_361" BEL
+        "x_regs/regFile_0_360" BEL "x_regs/regFile_0_359" BEL
+        "x_regs/regFile_0_358" BEL "x_regs/regFile_0_357" BEL
+        "x_regs/regFile_0_356" BEL "x_regs/regFile_0_355" BEL
+        "x_regs/regFile_0_354" BEL "x_regs/regFile_0_353" BEL
+        "x_regs/regFile_0_352" BEL "x_regs/regFile_0_351" BEL
+        "x_regs/regFile_0_350" BEL "x_regs/regFile_0_349" BEL
+        "x_regs/regFile_0_348" BEL "x_regs/regFile_0_347" BEL
+        "x_regs/regFile_0_346" BEL "x_regs/regFile_0_345" BEL
+        "x_regs/regFile_0_344" BEL "x_regs/regFile_0_343" BEL
+        "x_regs/regFile_0_342" BEL "x_regs/regFile_0_341" BEL
+        "x_regs/regFile_0_340" BEL "x_regs/regFile_0_339" BEL
+        "x_regs/regFile_0_338" BEL "x_regs/regFile_0_337" BEL
+        "x_regs/regFile_0_336" BEL "x_regs/regFile_0_335" BEL
+        "x_regs/regFile_0_334" BEL "x_regs/regFile_0_333" BEL
+        "x_regs/regFile_0_332" BEL "x_regs/regFile_0_331" BEL
+        "x_regs/regFile_0_330" BEL "x_regs/regFile_0_329" BEL
+        "x_regs/regFile_0_328" BEL "x_regs/regFile_0_327" BEL
+        "x_regs/regFile_0_326" BEL "x_regs/regFile_0_325" BEL
+        "x_regs/regFile_0_324" BEL "x_regs/regFile_0_323" BEL
+        "x_regs/regFile_0_322" BEL "x_regs/regFile_0_321" BEL
+        "x_regs/regFile_0_320" BEL "x_regs/regFile_0_319" BEL
+        "x_regs/regFile_0_318" BEL "x_regs/regFile_0_317" BEL
+        "x_regs/regFile_0_316" BEL "x_regs/regFile_0_315" BEL
+        "x_regs/regFile_0_314" BEL "x_regs/regFile_0_313" BEL
+        "x_regs/regFile_0_312" BEL "x_regs/regFile_0_311" BEL
+        "x_regs/regFile_0_310" BEL "x_regs/regFile_0_309" BEL
+        "x_regs/regFile_0_308" BEL "x_regs/regFile_0_307" BEL
+        "x_regs/regFile_0_306" BEL "x_regs/regFile_0_305" BEL
+        "x_regs/regFile_0_304" BEL "x_regs/regFile_0_303" BEL
+        "x_regs/regFile_0_302" BEL "x_regs/regFile_0_301" BEL
+        "x_regs/regFile_0_300" BEL "x_regs/regFile_0_299" BEL
+        "x_regs/regFile_0_298" BEL "x_regs/regFile_0_297" BEL
+        "x_regs/regFile_0_296" BEL "x_regs/regFile_0_295" BEL
+        "x_regs/regFile_0_294" BEL "x_regs/regFile_0_293" BEL
+        "x_regs/regFile_0_292" BEL "x_regs/regFile_0_291" BEL
+        "x_regs/regFile_0_290" BEL "x_regs/regFile_0_289" BEL
+        "x_regs/regFile_0_288" BEL "x_regs/regFile_0_287" BEL
+        "x_regs/regFile_0_286" BEL "x_regs/regFile_0_285" BEL
+        "x_regs/regFile_0_284" BEL "x_regs/regFile_0_283" BEL
+        "x_regs/regFile_0_282" BEL "x_regs/regFile_0_281" BEL
+        "x_regs/regFile_0_280" BEL "x_regs/regFile_0_279" BEL
+        "x_regs/regFile_0_278" BEL "x_regs/regFile_0_277" BEL
+        "x_regs/regFile_0_276" BEL "x_regs/regFile_0_275" BEL
+        "x_regs/regFile_0_274" BEL "x_regs/regFile_0_273" BEL
+        "x_regs/regFile_0_272" BEL "x_regs/regFile_0_271" BEL
+        "x_regs/regFile_0_270" BEL "x_regs/regFile_0_269" BEL
+        "x_regs/regFile_0_268" BEL "x_regs/regFile_0_267" BEL
+        "x_regs/regFile_0_266" BEL "x_regs/regFile_0_265" BEL
+        "x_regs/regFile_0_264" BEL "x_regs/regFile_0_263" BEL
+        "x_regs/regFile_0_262" BEL "x_regs/regFile_0_261" BEL
+        "x_regs/regFile_0_260" BEL "x_regs/regFile_0_259" BEL
+        "x_regs/regFile_0_258" BEL "x_regs/regFile_0_257" BEL
+        "x_regs/regFile_0_256" BEL "x_regs/regFile_0_255" BEL
+        "x_regs/regFile_0_254" BEL "x_regs/regFile_0_253" BEL
+        "x_regs/regFile_0_252" BEL "x_regs/regFile_0_251" BEL
+        "x_regs/regFile_0_250" BEL "x_regs/regFile_0_249" BEL
+        "x_regs/regFile_0_248" BEL "x_regs/regFile_0_247" BEL
+        "x_regs/regFile_0_246" BEL "x_regs/regFile_0_245" BEL
+        "x_regs/regFile_0_244" BEL "x_regs/regFile_0_243" BEL
+        "x_regs/regFile_0_242" BEL "x_regs/regFile_0_241" BEL
+        "x_regs/regFile_0_240" BEL "x_regs/regFile_0_239" BEL
+        "x_regs/regFile_0_238" BEL "x_regs/regFile_0_237" BEL
+        "x_regs/regFile_0_236" BEL "x_regs/regFile_0_235" BEL
+        "x_regs/regFile_0_234" BEL "x_regs/regFile_0_233" BEL
+        "x_regs/regFile_0_232" BEL "x_regs/regFile_0_231" BEL
+        "x_regs/regFile_0_230" BEL "x_regs/regFile_0_229" BEL
+        "x_regs/regFile_0_228" BEL "x_regs/regFile_0_227" BEL
+        "x_regs/regFile_0_226" BEL "x_regs/regFile_0_225" BEL
+        "x_regs/regFile_0_224" BEL "x_regs/regFile_0_223" BEL
+        "x_regs/regFile_0_222" BEL "x_regs/regFile_0_221" BEL
+        "x_regs/regFile_0_220" BEL "x_regs/regFile_0_219" BEL
+        "x_regs/regFile_0_218" BEL "x_regs/regFile_0_217" BEL
+        "x_regs/regFile_0_216" BEL "x_regs/regFile_0_215" BEL
+        "x_regs/regFile_0_214" BEL "x_regs/regFile_0_213" BEL
+        "x_regs/regFile_0_212" BEL "x_regs/regFile_0_211" BEL
+        "x_regs/regFile_0_210" BEL "x_regs/regFile_0_209" BEL
+        "x_regs/regFile_0_208" BEL "x_regs/regFile_0_207" BEL
+        "x_regs/regFile_0_206" BEL "x_regs/regFile_0_205" BEL
+        "x_regs/regFile_0_204" BEL "x_regs/regFile_0_203" BEL
+        "x_regs/regFile_0_202" BEL "x_regs/regFile_0_201" BEL
+        "x_regs/regFile_0_200" BEL "x_regs/regFile_0_199" BEL
+        "x_regs/regFile_0_198" BEL "x_regs/regFile_0_197" BEL
+        "x_regs/regFile_0_196" BEL "x_regs/regFile_0_195" BEL
+        "x_regs/regFile_0_194" BEL "x_regs/regFile_0_193" BEL
+        "x_regs/regFile_0_192" BEL "x_regs/regFile_0_191" BEL
+        "x_regs/regFile_0_190" BEL "x_regs/regFile_0_189" BEL
+        "x_regs/regFile_0_188" BEL "x_regs/regFile_0_187" BEL
+        "x_regs/regFile_0_186" BEL "x_regs/regFile_0_185" BEL
+        "x_regs/regFile_0_184" BEL "x_regs/regFile_0_183" BEL
+        "x_regs/regFile_0_182" BEL "x_regs/regFile_0_181" BEL
+        "x_regs/regFile_0_180" BEL "x_regs/regFile_0_179" BEL
+        "x_regs/regFile_0_178" BEL "x_regs/regFile_0_177" BEL
+        "x_regs/regFile_0_176" BEL "x_regs/regFile_0_175" BEL
+        "x_regs/regFile_0_174" BEL "x_regs/regFile_0_173" BEL
+        "x_regs/regFile_0_172" BEL "x_regs/regFile_0_171" BEL
+        "x_regs/regFile_0_170" BEL "x_regs/regFile_0_169" BEL
+        "x_regs/regFile_0_168" BEL "x_regs/regFile_0_167" BEL
+        "x_regs/regFile_0_166" BEL "x_regs/regFile_0_165" BEL
+        "x_regs/regFile_0_164" BEL "x_regs/regFile_0_163" BEL
+        "x_regs/regFile_0_162" BEL "x_regs/regFile_0_161" BEL
+        "x_regs/regFile_0_160" BEL "x_regs/regFile_0_159" BEL
+        "x_regs/regFile_0_158" BEL "x_regs/regFile_0_157" BEL
+        "x_regs/regFile_0_156" BEL "x_regs/regFile_0_155" BEL
+        "x_regs/regFile_0_154" BEL "x_regs/regFile_0_153" BEL
+        "x_regs/regFile_0_152" BEL "x_regs/regFile_0_151" BEL
+        "x_regs/regFile_0_150" BEL "x_regs/regFile_0_149" BEL
+        "x_regs/regFile_0_148" BEL "x_regs/regFile_0_147" BEL
+        "x_regs/regFile_0_146" BEL "x_regs/regFile_0_145" BEL
+        "x_regs/regFile_0_144" BEL "x_regs/regFile_0_143" BEL
+        "x_regs/regFile_0_142" BEL "x_regs/regFile_0_141" BEL
+        "x_regs/regFile_0_140" BEL "x_regs/regFile_0_139" BEL
+        "x_regs/regFile_0_138" BEL "x_regs/regFile_0_137" BEL
+        "x_regs/regFile_0_136" BEL "x_regs/regFile_0_135" BEL
+        "x_regs/regFile_0_134" BEL "x_regs/regFile_0_133" BEL
+        "x_regs/regFile_0_132" BEL "x_regs/regFile_0_131" BEL
+        "x_regs/regFile_0_130" BEL "x_regs/regFile_0_129" BEL
+        "x_regs/regFile_0_128" BEL "x_regs/regFile_0_127" BEL
+        "x_regs/regFile_0_126" BEL "x_regs/regFile_0_125" BEL
+        "x_regs/regFile_0_124" BEL "x_regs/regFile_0_123" BEL
+        "x_regs/regFile_0_122" BEL "x_regs/regFile_0_121" BEL
+        "x_regs/regFile_0_120" BEL "x_regs/regFile_0_119" BEL
+        "x_regs/regFile_0_118" BEL "x_regs/regFile_0_117" BEL
+        "x_regs/regFile_0_116" BEL "x_regs/regFile_0_115" BEL
+        "x_regs/regFile_0_114" BEL "x_regs/regFile_0_113" BEL
+        "x_regs/regFile_0_112" BEL "x_regs/regFile_0_111" BEL
+        "x_regs/regFile_0_110" BEL "x_regs/regFile_0_109" BEL
+        "x_regs/regFile_0_108" BEL "x_regs/regFile_0_107" BEL
+        "x_regs/regFile_0_106" BEL "x_regs/regFile_0_105" BEL
+        "x_regs/regFile_0_104" BEL "x_regs/regFile_0_103" BEL
+        "x_regs/regFile_0_102" BEL "x_regs/regFile_0_101" BEL
+        "x_regs/regFile_0_100" BEL "x_regs/regFile_0_99" BEL
+        "x_regs/regFile_0_98" BEL "x_regs/regFile_0_97" BEL
+        "x_regs/regFile_0_96" BEL "x_regs/regFile_0_95" BEL
+        "x_regs/regFile_0_94" BEL "x_regs/regFile_0_93" BEL
+        "x_regs/regFile_0_92" BEL "x_regs/regFile_0_91" BEL
+        "x_regs/regFile_0_90" BEL "x_regs/regFile_0_89" BEL
+        "x_regs/regFile_0_88" BEL "x_regs/regFile_0_87" BEL
+        "x_regs/regFile_0_86" BEL "x_regs/regFile_0_85" BEL
+        "x_regs/regFile_0_84" BEL "x_regs/regFile_0_83" BEL
+        "x_regs/regFile_0_82" BEL "x_regs/regFile_0_81" BEL
+        "x_regs/regFile_0_80" BEL "x_regs/regFile_0_79" BEL
+        "x_regs/regFile_0_78" BEL "x_regs/regFile_0_77" BEL
+        "x_regs/regFile_0_76" BEL "x_regs/regFile_0_75" BEL
+        "x_regs/regFile_0_74" BEL "x_regs/regFile_0_73" BEL
+        "x_regs/regFile_0_72" BEL "x_regs/regFile_0_71" BEL
+        "x_regs/regFile_0_70" BEL "x_regs/regFile_0_69" BEL
+        "x_regs/regFile_0_68" BEL "x_regs/regFile_0_67" BEL
+        "x_regs/regFile_0_66" BEL "x_regs/regFile_0_65" BEL
+        "x_regs/regFile_0_64" BEL "x_regs/regFile_0_63" BEL
+        "x_regs/regFile_0_62" BEL "x_regs/regFile_0_61" BEL
+        "x_regs/regFile_0_60" BEL "x_regs/regFile_0_59" BEL
+        "x_regs/regFile_0_58" BEL "x_regs/regFile_0_57" BEL
+        "x_regs/regFile_0_56" BEL "x_regs/regFile_0_55" BEL
+        "x_regs/regFile_0_54" BEL "x_regs/regFile_0_53" BEL
+        "x_regs/regFile_0_52" BEL "x_regs/regFile_0_51" BEL
+        "x_regs/regFile_0_50" BEL "x_regs/regFile_0_49" BEL
+        "x_regs/regFile_0_48" BEL "x_regs/regFile_0_47" BEL
+        "x_regs/regFile_0_46" BEL "x_regs/regFile_0_45" BEL
+        "x_regs/regFile_0_44" BEL "x_regs/regFile_0_43" BEL
+        "x_regs/regFile_0_42" BEL "x_regs/regFile_0_41" BEL
+        "x_regs/regFile_0_40" BEL "x_regs/regFile_0_39" BEL
+        "x_regs/regFile_0_38" BEL "x_regs/regFile_0_37" BEL
+        "x_regs/regFile_0_36" BEL "x_regs/regFile_0_35" BEL
+        "x_regs/regFile_0_34" BEL "x_regs/regFile_0_33" BEL
+        "x_regs/regFile_0_32" BEL "x_control/state_3" BEL "x_control/state_2"
+        BEL "x_control/state_1" BEL "x_control/state_0" BEL "x_pc/PCvalue_31"
+        BEL "x_pc/PCvalue_30" BEL "x_pc/PCvalue_29" BEL "x_pc/PCvalue_28" BEL
+        "x_pc/PCvalue_27" BEL "x_pc/PCvalue_26" BEL "x_pc/PCvalue_25" BEL
+        "x_pc/PCvalue_24" BEL "x_pc/PCvalue_23" BEL "x_pc/PCvalue_22" BEL
+        "x_pc/PCvalue_21" BEL "x_pc/PCvalue_20" BEL "x_pc/PCvalue_19" BEL
+        "x_pc/PCvalue_18" BEL "x_pc/PCvalue_17" BEL "x_pc/PCvalue_16" BEL
+        "x_pc/PCvalue_15" BEL "x_pc/PCvalue_14" BEL "x_pc/PCvalue_13" BEL
+        "x_pc/PCvalue_12" BEL "x_pc/PCvalue_11" BEL "x_pc/PCvalue_10" BEL
+        "x_pc/PCvalue_9" BEL "x_pc/PCvalue_8" BEL "x_pc/PCvalue_7" BEL
+        "x_pc/PCvalue_6" BEL "x_pc/PCvalue_5" BEL "x_pc/PCvalue_4" BEL
+        "x_pc/PCvalue_3" BEL "x_pc/PCvalue_2" BEL "x_pc/PCvalue_1" BEL
+        "x_pc/PCvalue_0" BEL "x_alu/ALUOut_31" BEL "x_alu/ALUOut_30" BEL
+        "x_alu/ALUOut_29" BEL "x_alu/ALUOut_28" BEL "x_alu/ALUOut_27" BEL
+        "x_alu/ALUOut_26" BEL "x_alu/ALUOut_25" BEL "x_alu/ALUOut_24" BEL
+        "x_alu/ALUOut_23" BEL "x_alu/ALUOut_22" BEL "x_alu/ALUOut_21" BEL
+        "x_alu/ALUOut_20" BEL "x_alu/ALUOut_19" BEL "x_alu/ALUOut_18" BEL
+        "x_alu/ALUOut_17" BEL "x_alu/ALUOut_16" BEL "x_alu/ALUOut_15" BEL
+        "x_alu/ALUOut_14" BEL "x_alu/ALUOut_13" BEL "x_alu/ALUOut_12" BEL
+        "x_alu/ALUOut_11" BEL "x_alu/ALUOut_10" BEL "x_alu/ALUOut_9" BEL
+        "x_alu/ALUOut_8" BEL "x_alu/ALUOut_7" BEL "x_alu/ALUOut_6" BEL
+        "x_alu/ALUOut_5" BEL "x_alu/ALUOut_4" BEL "x_alu/ALUOut_3" BEL
+        "x_alu/ALUOut_2" BEL "x_alu/ALUOut_1" BEL "x_alu/ALUOut_0" BEL
+        "clk_cpu_BUFG" BEL "clk_IBUF_BUFG" BEL "U1/SW_OK_0" BEL "U1/RSTN_temp"
+        BEL "U1/CR" BEL "U1/counter1_13" BEL "U1/counter1_14" BEL
+        "U1/counter1_15" BEL "U1/counter1_16" BEL "U1/counter1_17" BEL
+        "U1/counter1_18" BEL "U1/counter1_19" BEL "U1/counter1_20" BEL
+        "U1/clk1" BEL "U1/counter1_0" BEL "U1/counter1_1" BEL "U1/counter1_2"
+        BEL "U1/counter1_3" BEL "U1/counter1_4" BEL "U1/counter1_5" BEL
+        "U1/counter1_6" BEL "U1/counter1_7" BEL "U1/counter1_8" BEL
+        "U1/counter1_9" BEL "U1/counter1_10" BEL "U1/counter1_11" BEL
+        "U1/counter1_12" BEL "U2/LED_0" BEL "U2/LED_1" BEL "U2/LED_2" BEL
+        "U2/LED_3" BEL "U2/LED_4" BEL "U2/LED_5" BEL "U2/LED_6" BEL "U2/LED_7"
+        BEL "U2/P2S_led/shift_count_3" BEL "U2/P2S_led/shift_count_2" BEL
+        "U2/P2S_led/shift_count_1" BEL "U2/P2S_led/shift_count_0" BEL
+        "U2/P2S_led/state_FSM_FFd1" BEL "U2/P2S_led/state_FSM_FFd2" BEL
+        "U2/P2S_led/buffer_15" BEL "U2/P2S_led/buffer_14" BEL
+        "U2/P2S_led/buffer_13" BEL "U2/P2S_led/buffer_12" BEL
+        "U2/P2S_led/buffer_11" BEL "U2/P2S_led/buffer_10" BEL
+        "U2/P2S_led/buffer_9" BEL "U2/P2S_led/buffer_8" BEL
+        "U2/P2S_led/buffer_7" BEL "U2/P2S_led/buffer_6" BEL
+        "U2/P2S_led/buffer_5" BEL "U2/P2S_led/buffer_4" BEL
+        "U2/P2S_led/buffer_3" BEL "U2/P2S_led/buffer_2" BEL
+        "U2/P2S_led/buffer_1" BEL "U2/P2S_led/buffer_0" BEL
+        "U2/P2S_led/start_1" BEL "U2/P2S_led/start_0" BEL "U2/P2S_led/s_clk"
+        BEL "U2/P2S_led/EN" BEL "U3/M2/state_FSM_FFd1" BEL
+        "U3/M2/state_FSM_FFd2" BEL "U3/M2/start_1" BEL "U3/M2/start_0" BEL
+        "U3/M2/s_clk" BEL "U3/M2/EN" BEL "U3/M2/shift_count_4" BEL
+        "U3/M2/shift_count_3" BEL "U3/M2/shift_count_2" BEL
+        "U3/M2/shift_count_1" BEL "U3/M2/shift_count_0" BEL
+        "U3/M2/shift_count_5" BEL "U3/M2/buffer_63" BEL "U3/M2/buffer_62" BEL
+        "U3/M2/buffer_61" BEL "U3/M2/buffer_60" BEL "U3/M2/buffer_59" BEL
+        "U3/M2/buffer_58" BEL "U3/M2/buffer_57" BEL "U3/M2/buffer_56" BEL
+        "U3/M2/buffer_55" BEL "U3/M2/buffer_54" BEL "U3/M2/buffer_53" BEL
+        "U3/M2/buffer_52" BEL "U3/M2/buffer_51" BEL "U3/M2/buffer_50" BEL
+        "U3/M2/buffer_49" BEL "U3/M2/buffer_48" BEL "U3/M2/buffer_47" BEL
+        "U3/M2/buffer_46" BEL "U3/M2/buffer_45" BEL "U3/M2/buffer_44" BEL
+        "U3/M2/buffer_43" BEL "U3/M2/buffer_42" BEL "U3/M2/buffer_41" BEL
+        "U3/M2/buffer_40" BEL "U3/M2/buffer_39" BEL "U3/M2/buffer_38" BEL
+        "U3/M2/buffer_37" BEL "U3/M2/buffer_36" BEL "U3/M2/buffer_35" BEL
+        "U3/M2/buffer_34" BEL "U3/M2/buffer_33" BEL "U3/M2/buffer_32" BEL
+        "U3/M2/buffer_31" BEL "U3/M2/buffer_30" BEL "U3/M2/buffer_29" BEL
+        "U3/M2/buffer_28" BEL "U3/M2/buffer_27" BEL "U3/M2/buffer_26" BEL
+        "U3/M2/buffer_25" BEL "U3/M2/buffer_24" BEL "U3/M2/buffer_23" BEL
+        "U3/M2/buffer_22" BEL "U3/M2/buffer_21" BEL "U3/M2/buffer_20" BEL
+        "U3/M2/buffer_19" BEL "U3/M2/buffer_18" BEL "U3/M2/buffer_17" BEL
+        "U3/M2/buffer_16" BEL "U3/M2/buffer_15" BEL "U3/M2/buffer_14" BEL
+        "U3/M2/buffer_13" BEL "U3/M2/buffer_12" BEL "U3/M2/buffer_11" BEL
+        "U3/M2/buffer_10" BEL "U3/M2/buffer_9" BEL "U3/M2/buffer_8" BEL
+        "U3/M2/buffer_7" BEL "U3/M2/buffer_6" BEL "U3/M2/buffer_5" BEL
+        "U3/M2/buffer_4" BEL "U3/M2/buffer_3" BEL "U3/M2/buffer_2" BEL
+        "U3/M2/buffer_1" BEL "U3/M2/buffer_0" PIN
+        "x_memory/ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram_pins<32>"
+        PIN
+        "x_memory/ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram_pins<33>";
+TS_CLK_100M = PERIOD TIMEGRP "TM_CLK" 10 ns HIGH 50%;
+SCHEMATIC END;
+
