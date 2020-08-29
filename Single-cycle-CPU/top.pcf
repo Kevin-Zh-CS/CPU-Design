@@ -1,0 +1,148 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Jul 14 00:21:20 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "seg_clk" LOCATE = SITE "M24" LEVEL 1;
+COMP "BTN_X<4>" LOCATE = SITE "W16" LEVEL 1;
+COMP "BTN_X<3>" LOCATE = SITE "W15" LEVEL 1;
+COMP "BTN_X<2>" LOCATE = SITE "W19" LEVEL 1;
+COMP "BTN_X<1>" LOCATE = SITE "W18" LEVEL 1;
+COMP "BTN_X<0>" LOCATE = SITE "V17" LEVEL 1;
+COMP "CR" LOCATE = SITE "V22" LEVEL 1;
+COMP "seg_clrn" LOCATE = SITE "M20" LEVEL 1;
+COMP "RDY" LOCATE = SITE "U21" LEVEL 1;
+COMP "led_sout" LOCATE = SITE "M26" LEVEL 1;
+COMP "LED_PEN" LOCATE = SITE "P18" LEVEL 1;
+COMP "BTN_Y<3>" LOCATE = SITE "W14" LEVEL 1;
+COMP "BTN_Y<2>" LOCATE = SITE "V14" LEVEL 1;
+COMP "BTN_Y<1>" LOCATE = SITE "V19" LEVEL 1;
+COMP "BTN_Y<0>" LOCATE = SITE "V18" LEVEL 1;
+COMP "led_clk" LOCATE = SITE "N26" LEVEL 1;
+COMP "readn" LOCATE = SITE "U22" LEVEL 1;
+COMP "seg_sout" LOCATE = SITE "L24" LEVEL 1;
+COMP "clk" LOCATE = SITE "AC18" LEVEL 1;
+COMP "SEG_PEN" LOCATE = SITE "R18" LEVEL 1;
+COMP "SW<0>" LOCATE = SITE "AA10" LEVEL 1;
+COMP "SW<1>" LOCATE = SITE "AB10" LEVEL 1;
+COMP "SW<2>" LOCATE = SITE "AA13" LEVEL 1;
+COMP "SW<3>" LOCATE = SITE "AA12" LEVEL 1;
+COMP "SW<4>" LOCATE = SITE "Y13" LEVEL 1;
+COMP "SW<5>" LOCATE = SITE "Y12" LEVEL 1;
+COMP "SW<6>" LOCATE = SITE "AD11" LEVEL 1;
+COMP "led_clrn" LOCATE = SITE "N24" LEVEL 1;
+COMP "RSTN" LOCATE = SITE "W13" LEVEL 1;
+COMP "LED<0>" LOCATE = SITE "AF24" LEVEL 1;
+COMP "LED<1>" LOCATE = SITE "AE21" LEVEL 1;
+COMP "LED<2>" LOCATE = SITE "Y22" LEVEL 1;
+COMP "LED<3>" LOCATE = SITE "Y23" LEVEL 1;
+COMP "LED<4>" LOCATE = SITE "AA23" LEVEL 1;
+PIN
+        x_dat_block/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram_pins<32>
+        = BEL
+        "x_dat_block/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram"
+        PINNAME CLKARDCLK;
+PIN
+        x_dat_block/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram_pins<33>
+        = BEL
+        "x_dat_block/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram"
+        PINNAME CLKBWRCLK;
+PIN
+        x_instr_block/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram_pins<32>
+        = BEL
+        "x_instr_block/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram"
+        PINNAME CLKARDCLK;
+PIN
+        x_instr_block/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram_pins<33>
+        = BEL
+        "x_instr_block/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram"
+        PINNAME CLKBWRCLK;
+TIMEGRP TM_CLK = BEL "disp_num_15" BEL "disp_num_12" BEL "disp_num_14" BEL
+        "disp_num_13" BEL "disp_num_9" BEL "disp_num_11" BEL "disp_num_10" BEL
+        "disp_num_8" BEL "disp_num_7" BEL "disp_num_6" BEL "disp_num_5" BEL
+        "disp_num_2" BEL "disp_num_4" BEL "disp_num_3" BEL "disp_num_1" BEL
+        "disp_num_0" BEL "x_clk_div/clkdiv_0" BEL "x_clk_div/clkdiv_1" BEL
+        "x_clk_div/clkdiv_2" BEL "x_clk_div/clkdiv_3" BEL "x_clk_div/clkdiv_4"
+        BEL "x_clk_div/clkdiv_5" BEL "x_clk_div/clkdiv_6" BEL
+        "x_clk_div/clkdiv_7" BEL "x_clk_div/clkdiv_8" BEL "x_clk_div/clkdiv_9"
+        BEL "x_clk_div/clkdiv_10" BEL "x_clk_div/clkdiv_11" BEL
+        "x_clk_div/clkdiv_12" BEL "x_clk_div/clkdiv_13" BEL
+        "x_clk_div/clkdiv_14" BEL "x_clk_div/clkdiv_15" BEL
+        "x_clk_div/clkdiv_16" BEL "x_clk_div/clkdiv_17" BEL
+        "x_clk_div/clkdiv_18" BEL "x_clk_div/clkdiv_19" BEL
+        "x_clk_div/clkdiv_20" BEL "clk_BUFGP/BUFG" BEL
+        "x_SAnti_jitter/SW_OK_0" BEL "x_SAnti_jitter/CR" BEL
+        "x_SAnti_jitter/counter1_13" BEL "x_SAnti_jitter/counter1_14" BEL
+        "x_SAnti_jitter/counter1_15" BEL "x_SAnti_jitter/counter1_16" BEL
+        "x_SAnti_jitter/counter1_17" BEL "x_SAnti_jitter/counter1_18" BEL
+        "x_SAnti_jitter/counter1_19" BEL "x_SAnti_jitter/counter1_20" BEL
+        "x_SAnti_jitter/clk1" BEL "x_SAnti_jitter/counter1_0" BEL
+        "x_SAnti_jitter/counter1_1" BEL "x_SAnti_jitter/counter1_2" BEL
+        "x_SAnti_jitter/counter1_3" BEL "x_SAnti_jitter/counter1_4" BEL
+        "x_SAnti_jitter/counter1_5" BEL "x_SAnti_jitter/counter1_6" BEL
+        "x_SAnti_jitter/counter1_7" BEL "x_SAnti_jitter/counter1_8" BEL
+        "x_SAnti_jitter/counter1_9" BEL "x_SAnti_jitter/counter1_10" BEL
+        "x_SAnti_jitter/counter1_11" BEL "x_SAnti_jitter/counter1_12" BEL
+        "x_SPIO/LED_1" BEL "x_SPIO/LED_3" BEL "x_SPIO/LED_5" BEL
+        "x_SPIO/P2S_led/shift_count_3" BEL "x_SPIO/P2S_led/shift_count_2" BEL
+        "x_SPIO/P2S_led/shift_count_1" BEL "x_SPIO/P2S_led/shift_count_0" BEL
+        "x_SPIO/P2S_led/state_FSM_FFd1" BEL "x_SPIO/P2S_led/state_FSM_FFd2"
+        BEL "x_SPIO/P2S_led/buffer_15" BEL "x_SPIO/P2S_led/buffer_14" BEL
+        "x_SPIO/P2S_led/buffer_13" BEL "x_SPIO/P2S_led/buffer_12" BEL
+        "x_SPIO/P2S_led/buffer_11" BEL "x_SPIO/P2S_led/buffer_10" BEL
+        "x_SPIO/P2S_led/buffer_9" BEL "x_SPIO/P2S_led/buffer_8" BEL
+        "x_SPIO/P2S_led/buffer_7" BEL "x_SPIO/P2S_led/buffer_6" BEL
+        "x_SPIO/P2S_led/buffer_5" BEL "x_SPIO/P2S_led/buffer_4" BEL
+        "x_SPIO/P2S_led/buffer_3" BEL "x_SPIO/P2S_led/buffer_2" BEL
+        "x_SPIO/P2S_led/buffer_1" BEL "x_SPIO/P2S_led/buffer_0" BEL
+        "x_SPIO/P2S_led/start_1" BEL "x_SPIO/P2S_led/start_0" BEL
+        "x_SPIO/P2S_led/s_clk" BEL "x_SPIO/P2S_led/EN" BEL
+        "x_SSeg7_Dev/M2/state_FSM_FFd1" BEL "x_SSeg7_Dev/M2/state_FSM_FFd2"
+        BEL "x_SSeg7_Dev/M2/start_1" BEL "x_SSeg7_Dev/M2/start_0" BEL
+        "x_SSeg7_Dev/M2/s_clk" BEL "x_SSeg7_Dev/M2/EN" BEL
+        "x_SSeg7_Dev/M2/shift_count_4" BEL "x_SSeg7_Dev/M2/shift_count_3" BEL
+        "x_SSeg7_Dev/M2/shift_count_2" BEL "x_SSeg7_Dev/M2/shift_count_1" BEL
+        "x_SSeg7_Dev/M2/shift_count_0" BEL "x_SSeg7_Dev/M2/shift_count_5" BEL
+        "x_SSeg7_Dev/M2/buffer_63" BEL "x_SSeg7_Dev/M2/buffer_62" BEL
+        "x_SSeg7_Dev/M2/buffer_61" BEL "x_SSeg7_Dev/M2/buffer_60" BEL
+        "x_SSeg7_Dev/M2/buffer_59" BEL "x_SSeg7_Dev/M2/buffer_58" BEL
+        "x_SSeg7_Dev/M2/buffer_57" BEL "x_SSeg7_Dev/M2/buffer_56" BEL
+        "x_SSeg7_Dev/M2/buffer_55" BEL "x_SSeg7_Dev/M2/buffer_54" BEL
+        "x_SSeg7_Dev/M2/buffer_53" BEL "x_SSeg7_Dev/M2/buffer_52" BEL
+        "x_SSeg7_Dev/M2/buffer_51" BEL "x_SSeg7_Dev/M2/buffer_50" BEL
+        "x_SSeg7_Dev/M2/buffer_49" BEL "x_SSeg7_Dev/M2/buffer_48" BEL
+        "x_SSeg7_Dev/M2/buffer_47" BEL "x_SSeg7_Dev/M2/buffer_46" BEL
+        "x_SSeg7_Dev/M2/buffer_45" BEL "x_SSeg7_Dev/M2/buffer_44" BEL
+        "x_SSeg7_Dev/M2/buffer_43" BEL "x_SSeg7_Dev/M2/buffer_42" BEL
+        "x_SSeg7_Dev/M2/buffer_41" BEL "x_SSeg7_Dev/M2/buffer_40" BEL
+        "x_SSeg7_Dev/M2/buffer_39" BEL "x_SSeg7_Dev/M2/buffer_38" BEL
+        "x_SSeg7_Dev/M2/buffer_37" BEL "x_SSeg7_Dev/M2/buffer_36" BEL
+        "x_SSeg7_Dev/M2/buffer_35" BEL "x_SSeg7_Dev/M2/buffer_34" BEL
+        "x_SSeg7_Dev/M2/buffer_33" BEL "x_SSeg7_Dev/M2/buffer_32" BEL
+        "x_SSeg7_Dev/M2/buffer_31" BEL "x_SSeg7_Dev/M2/buffer_30" BEL
+        "x_SSeg7_Dev/M2/buffer_29" BEL "x_SSeg7_Dev/M2/buffer_28" BEL
+        "x_SSeg7_Dev/M2/buffer_27" BEL "x_SSeg7_Dev/M2/buffer_26" BEL
+        "x_SSeg7_Dev/M2/buffer_25" BEL "x_SSeg7_Dev/M2/buffer_24" BEL
+        "x_SSeg7_Dev/M2/buffer_23" BEL "x_SSeg7_Dev/M2/buffer_22" BEL
+        "x_SSeg7_Dev/M2/buffer_21" BEL "x_SSeg7_Dev/M2/buffer_20" BEL
+        "x_SSeg7_Dev/M2/buffer_19" BEL "x_SSeg7_Dev/M2/buffer_18" BEL
+        "x_SSeg7_Dev/M2/buffer_17" BEL "x_SSeg7_Dev/M2/buffer_16" BEL
+        "x_SSeg7_Dev/M2/buffer_15" BEL "x_SSeg7_Dev/M2/buffer_14" BEL
+        "x_SSeg7_Dev/M2/buffer_13" BEL "x_SSeg7_Dev/M2/buffer_12" BEL
+        "x_SSeg7_Dev/M2/buffer_11" BEL "x_SSeg7_Dev/M2/buffer_10" BEL
+        "x_SSeg7_Dev/M2/buffer_9" BEL "x_SSeg7_Dev/M2/buffer_8" BEL
+        "x_SSeg7_Dev/M2/buffer_7" BEL "x_SSeg7_Dev/M2/buffer_6" BEL
+        "x_SSeg7_Dev/M2/buffer_5" BEL "x_SSeg7_Dev/M2/buffer_4" BEL
+        "x_SSeg7_Dev/M2/buffer_3" BEL "x_SSeg7_Dev/M2/buffer_2" BEL
+        "x_SSeg7_Dev/M2/buffer_1" BEL "x_SSeg7_Dev/M2/buffer_0" PIN
+        "x_dat_block/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram_pins<32>"
+        PIN
+        "x_dat_block/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram_pins<33>"
+        PIN
+        "x_instr_block/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram_pins<32>"
+        PIN
+        "x_instr_block/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram_pins<33>"
+        BEL "x_SAnti_jitter/RSTN_temp";
+TS_CLK_100M = PERIOD TIMEGRP "TM_CLK" 10 ns HIGH 50%;
+SCHEMATIC END;
+

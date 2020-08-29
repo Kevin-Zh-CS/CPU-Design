@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\Users\hongx\source\Verilog\v3\top.ncd
-OUTFILE=C:\Users\hongx\source\Verilog\v3\top.bit
-FAMILY=Kintex7
-PART=xc7k160t-1ffg676
-WORKINGDIR=C:\Users\hongx\source\Verilog\v3
-LICENSE=WebPack
-USER_INFO=__0_0_0

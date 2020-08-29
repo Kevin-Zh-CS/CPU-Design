@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=G:\ISE24\single_cpu\top.ncd
+OUTFILE=G:\ISE24\single_cpu\top.bit
+FAMILY=Kintex7
+PART=xc7k160t-1fbg676
+WORKINGDIR=G:\ISE24\single_cpu
+LICENSE=WebPack
+USER_INFO=__0_0_0
