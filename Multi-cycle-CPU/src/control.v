@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 //信号控制单元模块：ControlUnit
-//输入：时钟信号clk，零标志位zero，符号位标志sign
+//输入：时钟信号clk，opcode，复位信号rst
 //输出：各个控制信号
 module control(
     input clk,
