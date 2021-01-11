@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="267" delta="unknown" >"D:/Course/2018_topic2_student/mips_top.v" Line 96: Cannot find port <arg fmt="%s" index="1">lcd_dat</arg> on this module
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1654" delta="unknown" >"D:/Course/2018_topic2_student/mips_top.v" Line 22: Instantiating &lt;<arg fmt="%s" index="1">CLK_GEN</arg>&gt; from unknown module &lt;<arg fmt="%s" index="2">clk_gen</arg>&gt;
+</msg>
+
+<msg type="error" file="Simulator" num="778" delta="unknown" >Static elaboration of top level Verilog design unit(s) in library <arg fmt="%s" index="1">work</arg> failed
+</msg>
+
+</messages>
+

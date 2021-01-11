@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=D:\Course\gitcpu\Pipeline-CPU\impact.xsl
+OUTFILE=D:\Course\gitcpu\Pipeline-CPU\impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=D:\Course\gitcpu\Pipeline-CPU
+LICENSE=iMPACT
+USER_INFO=iMPACT
